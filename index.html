@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Background-color-changing</title>
+</head>
+
+<body>
+    <div class="container">
+        <span>Background-Color : <small> #F54748</small> </span> <br>
+    </div>
+    <button class="btn" onclick="change()">Click Me</button>
+    <div class="container_2" id="container_2">
+        <span>Counter</span> <br>
+        <input id="input_Value" type="text" value="0" class="display" onfocus="value=''"> <br>
+        <span id="info">(Press reset button to zero)</span>
+        <button class="decrease" style="float: left;" onclick="valueDecrease()">Decrease</button>
+        <button class="reset" style="float: none;" onclick="valueReset()">Reset</button>
+        <button class="increase" style="float: right;" onclick="valueIncrease()">Increase</button>
+    </div>
+    <div class="container_3">
+        <div class="row">
+            <div class="col orange" id="orange" onclick="orange()">
+                <small id="orange-text">orange</small>
+            </div>
+            <div class="col white" id="white" onclick="white()">
+                <small id="white-text">white</small>
+            </div>
+            <div class="col green" id="green" onclick="green()">
+                <small id="green-text">green</small>
+            </div>
+            <div class="col blue" id="blue" onclick="blue()">
+                <small id="blue-text">blue</small>
+            </div>
+        </div>
+    </div>
+    <div class="container_4">
+        <h1>Age Calculator</h1>
+        <label for="birth_date">Birth Date</label><input type="date" onfocus="error_msg()" name="birth_date"
+            id="birth_date"> <br> <br>
+        <label class="label_2" for="today_date">Today Date</label><input type="text" name="today_date" id="today_date">
+        <button onclick="age_calculate()">Calculate</button>
+        <button onclick="reset_value()">Reset</button>
+        <h3 id="error_msg"> ⚠️ Entre Birth date </h3>
+        <h1>Result</h1>
+        <p id="age_result"></p>
+        <p id="hours_result"></p>
+        <p id="minutes_result"></p>
+        <p id="second_result"></p>
+    </div>
+
+    <script src="./action.js"></script>
+</body>
+
+</html>
